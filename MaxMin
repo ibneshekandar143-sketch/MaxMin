@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class MaxMin {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many numbers ? ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter number 1: ");
+        int number = sc.nextInt();
+
+        int maximum = number;
+        int minimum = number;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter number " + i + ": ");
+            number = sc.nextInt();
+
+            if (number > maximum){
+                maximum = number;
+            }
+            if (number < minimum){
+                minimum = number;
+            }
+        }
+        System.out.println("Maximum number = " + maximum);
+        System.out.println("Minimum number = "+ minimum);
+
+        sc.close();
+    }
+}
